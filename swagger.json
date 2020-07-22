@@ -1,0 +1,98 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Yet Another Node.js Blogg Application API",
+    "description": "Yet Another Node.js Blogg Application API",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "host": "localhost:3000",
+  "basePath": "/api/v1",
+  "tags": [
+    {
+      "name": "Auth",
+      "description": "BLABLABA AUTH"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/auth": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "description": "Authuser",
+        "request": {
+          "content": {
+            "username": "string"
+          }
+        },
+        "parameters": [
+          {
+            "name": "username",
+            "in": "body",
+            "description": "User that we want to login"
+          },
+          {
+            "name": "password",
+            "in": "body",
+            "description": "Pass that we want to login"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "New user is logged",
+            "schema": {
+              "$ref": "#/definitions/Profile"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Auth": {
+      "properties": {
+        "username": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      }
+    },
+    "Profile": {
+      "properties": {
+        "profile_name": {
+          "type": "string"
+        },
+        "profile_pic": {
+          "type": "string"
+        },
+        "profile_id": {
+          "type": "number"
+        },
+        "profile_stack": {
+          "type": "string"
+        },
+        "bearer": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

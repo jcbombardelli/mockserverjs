@@ -1,0 +1,29 @@
+{
+  "name": "mockserverjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcbombardelli/mockserverjs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jcbombardelli/mockserverjs/issues"
+  },
+  "homepage": "https://github.com/jcbombardelli/mockserverjs#readme",
+  "dependencies": {
+    "body-parser": "1.17.2",
+    "express": "4.15.3",
+    "swagger-ui-express": "2.0.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
